@@ -65,6 +65,15 @@ Node * input_tree()
 }
 
 
+int countLeaf(Node * root){
+if(root==nullptr)return 0;
+if(root->left == nullptr && root->right == nullptr)return 1;
+int l = countLeaf(root->left);
+int r = countLeaf(root->right);
+return l+r;
+
+}
+
 
 int main()
 {
